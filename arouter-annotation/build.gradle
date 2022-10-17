@@ -1,8 +1,10 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/maven-publish.gradle')

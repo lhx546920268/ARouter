@@ -1,12 +1,14 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
-    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
-    buildToolsVersion BUILDTOOLS_VERSION
+    compileSdk Integer.parseInt(COMPILE_SDK_VERSION)
 
     defaultConfig {
-        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+        minSdk Integer.parseInt(MIN_SDK_VERSION)
+        targetSdk Integer.parseInt(TARGET_SDK_VERSION)
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -16,24 +18,25 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
         release {
-            debuggable false
             minifyEnabled false
         }
 
         lintOptions { abortOnError false }
     }
+    namespace 'com.alibaba.android.arouter'
 }
 
 dependencies {
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
-    api 'com.alibaba:arouter-annotation:1.0.6'
+    annotationProcessor project(':arouter-compiler')
+    api project(':arouter-annotation')
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
 
-apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/maven-publish.gradle')
