@@ -2,21 +2,33 @@
     A framework for assisting in the renovation of Android app componentization
 ```
 
-[中文文档](https://github.com/alibaba/ARouter/blob/master/README_CN.md)
+[中文文档](https://github.com/jadepeakpoet/ARouter/blob/develop/README_CN.md)
 
 ##### [![Join the chat at https://gitter.im/alibaba/ARouter](https://badges.gitter.im/alibaba/ARouter.svg)](https://gitter.im/alibaba/ARouter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ---
 
-#### Lastest version
+####Description
+The official version has not been upgraded for two years. I forked a version and made the following changes
+1. Migrate to androidx. For this library, you can turn off jetifier(android.enableJetifier=false) or do not configure it.
+2. Adapt to AGP7.3.0 to solve compatibility bugs
+3. Upgrade the dependent third-party library
+4. Publish the library to jitpack
 
-module|arouter-api|arouter-compiler|arouter-register|arouter-idea-plugin
----|---|---|---|---
-version|[![Download](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-api)|[![Download](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-compiler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-compiler)|[![Download](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-register/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/arouter-register)|[![as plugin](https://img.shields.io/jetbrains/plugin/d/11428-arouter-helper.svg)](https://plugins.jetbrains.com/plugin/11428-arouter-helper)
+When using, you only need to make the following  changes to the original library
+1.
+The following dependent groups are changed from com.alibaba to com.github.jadepeakpoet.ARouter
+com.github.jadepeakpoet.ARouter:arouter-register:1.0.1
+com.github.jadepeakpoet.ARouter:arouter-api:1.0.1
+com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1
 
-#### Demo
+2.
+Maven library changed from Maven Central to jitpack
+maven { url ' https://jitpack.io ' }
 
-##### [Demo apk](https://github.com/alibaba/ARouter/blob/develop/demo/arouter-demo-1.5.2.apk)、[Demo Gif](https://raw.githubusercontent.com/alibaba/ARouter/master/demo/arouter-demo.gif)
+
+
+If there is a problem, you can directly give me the issue and I will solve it as soon as possible
 
 #### I. Feature
 1. **Supports direct parsing of standard URLs for jumps and automatic injection of parameters into target pages**
@@ -58,8 +70,8 @@ version|[![Download](https://maven-badges.herokuapp.com/maven-central/com.alibab
 
     dependencies {
         // Replace with the latest version
-        compile 'com.alibaba:arouter-api:?'
-        annotationProcessor 'com.alibaba:arouter-compiler:?'
+        implementation 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
+        annotationProcessor 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
         ...
     }
     // Old version of gradle plugin (< 2.2), You can use apt plugin, look at 'Other#1'
@@ -117,12 +129,12 @@ version|[![Download](https://maven-badges.herokuapp.com/maven-central/com.alibab
 
     buildscript {
         repositories {
-            mavenCentral()
+            maven { url 'https://jitpack.io' }
         }
 
         dependencies {
             // Replace with the latest version
-            classpath "com.alibaba:arouter-register:?"
+            classpath "com.github.jadepeakpoet.ARouter:arouter-register:1.0.1"
         }
     }
     ```
@@ -493,7 +505,7 @@ annotation，**Only the routing information of the same group can be registered 
 
     buildscript {
         repositories {
-            mavenCentral()
+            maven { url 'https://jitpack.io' }
         }
 
         dependencies {
@@ -508,8 +520,8 @@ annotation，**Only the routing information of the same group can be registered 
     }
 
     dependencies {
-        compile 'com.alibaba:arouter-api:x.x.x'
-        apt 'com.alibaba:arouter-compiler:x.x.x'
+        compile 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
+        apt 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
         ...
     }
     ```
@@ -526,8 +538,8 @@ annotation，**Only the routing information of the same group can be registered 
     }
 
     dependencies {
-        compile 'com.alibaba:arouter-api:x.x.x'
-        kapt 'com.alibaba:arouter-compiler:x.x.x'
+        implementation 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
+        kapt 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
         ...
     }
     ```
