@@ -41,6 +41,7 @@ afterEvaluate { project ->
 
     if (plugins.hasPlugin('com.android.application') || plugins.hasPlugin('com.android.library')) {
         task androidJavadocs(type: Javadoc) {
+            failOnError false
             source = android.sourceSets.main.java.source
             classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
         }
@@ -56,7 +57,7 @@ afterEvaluate { project ->
             getArchiveClassifier().set('sources')
             from android.sourceSets.main.java.source
         }
-    } else {
+    } else if (plugins.hasPlugin("java")) {
         task sourcesJar(type: Jar, dependsOn: classes) {
             getArchiveClassifier().convention('sources')
             getArchiveClassifier().set('sources')
@@ -82,7 +83,7 @@ afterEvaluate { project ->
         if (plugins.hasPlugin('com.android.application') || plugins.hasPlugin('com.android.library')) {
             archives androidSourcesJar
             archives androidJavadocsJar
-        } else {
+        } else if (plugins.hasPlugin("java")){
             archives sourcesJar
             archives javadocJar
         }
