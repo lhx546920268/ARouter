@@ -21,7 +21,6 @@ The following dependent groups are changed from com.alibaba to com.github.jadepe
 com.github.jadepeakpoet.ARouter:arouter-register:1.0.1  
 com.github.jadepeakpoet.ARouter:arouter-api:1.0.1  
 com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
-
 2.  
 Maven library changed from Maven Central to jitpack  
 maven { url ' https://jitpack.io ' }
