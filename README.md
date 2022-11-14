@@ -15,7 +15,7 @@ The official version has not been upgraded for two years. I forked a version and
 3. Upgrade the dependent third-party library
 4. Publish the library to jitpack
 
-When using, you only need to make the following  changes to the original library
+When using, you only need to make the following  changes to the original library  
 1.  
 The following dependent groups are changed from com.alibaba to com.github.jadepeakpoet.ARouter  
 com.github.jadepeakpoet.ARouter:arouter-register:1.0.1  
