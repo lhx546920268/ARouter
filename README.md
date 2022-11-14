@@ -10,7 +10,7 @@
 
 #### Description
 # Android Open Project Renovation
-# https://github.com/jadepeakpoet/AndroidProjectRenovation
+https://github.com/jadepeakpoet/AndroidProjectRenovation  
 The official version has not been upgraded for two years. I forked a version and made the following changes，if there is a problem, you can directly give me the issue at project AndroidProjectRenovation and I will solve it as soon as possible
 
 1. Migrate to androidx. For this library, you can turn off jetifier(android.enableJetifier=false) or do not configure it.
