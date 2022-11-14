@@ -9,24 +9,23 @@
 ---
 
 #### 说明
-官方两年没更新了，我fork了一个版本，主要做了以下更改
-1.迁移到androidx，对于本库可关闭jetifier(android.enableJetifier=false)或不做配置
-2.适配到AGP7.3.0，解决其中的兼容性bug
-3.升级依赖的第三方库
-4.在jitpack发布本库
+官方两年没更新了，我fork了一个版本，主要做了以下更改  
+1.迁移到androidx，对于本库可关闭jetifier(android.enableJetifier=false)或不做配置  
+2.适配到AGP7.3.0，解决其中的兼容性bug  
+3.升级依赖的第三方库  
+4.在jitpack发布本库  
 
-使用时，相对原来的库，仅需要做以下更改
-1.
-以下几个依赖的group从com.alibaba更改为com.github.jadepeakpoet.ARouter
-com.github.jadepeakpoet.ARouter:arouter-register:1.0.1
-com.github.jadepeakpoet.ARouter:arouter-api:1.0.1
-com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1
+使用时，相对原来的库，仅需要做以下更改  
+1.  
+以下几个依赖的group从com.alibaba更改为com.github.jadepeakpoet.ARouter  
+com.github.jadepeakpoet.ARouter:arouter-register:1.0.1  
+com.github.jadepeakpoet.ARouter:arouter-api:1.0.1  
+com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
+2.  
+maven库从mavenCentral变更为jitpack  
+maven { url 'https://jitpack.io' }  
 
-2.
-maven库从mavenCentral变更为jitpack
-maven { url 'https://jitpack.io' }
-
-如果有问题，大家可以直接给我提issue，我会尽快解决
+如果有问题，大家可以直接给我提issue，我会尽快解决  
 
 #### 一、功能介绍
 1. **支持直接解析标准URL进行跳转，并自动注入参数到目标页面中**
