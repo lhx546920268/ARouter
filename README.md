@@ -17,10 +17,10 @@ The official version has not been upgraded for two years. I forked a version and
 
 When using, you only need to make the following  changes to the original library
 1.
-The following dependent groups are changed from com.alibaba to com.github.jadepeakpoet.ARouter
-com.github.jadepeakpoet.ARouter:arouter-register:1.0.1
-com.github.jadepeakpoet.ARouter:arouter-api:1.0.1
-com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1
+The following dependent groups are changed from com.alibaba to com.github.jadepeakpoet.ARouter  
+com.github.jadepeakpoet.ARouter:arouter-register:1.0.1  
+com.github.jadepeakpoet.ARouter:arouter-api:1.0.1  
+com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
 
 2.
 Maven library changed from Maven Central to jitpack
