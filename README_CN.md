@@ -26,7 +26,7 @@ com.github.jadepeakpoet.ARouter:arouter-api:1.0.1
 com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
 2.  
 maven库从mavenCentral变更为jitpack  
-maven { url 'https://jitpack.io' }  
+maven { url 'https://www.jitpack.io' }
 
 #### 一、功能介绍
 1. **支持直接解析标准URL进行跳转，并自动注入参数到目标页面中**
@@ -129,7 +129,7 @@ maven { url 'https://jitpack.io' }
 
     buildscript {
         repositories {
-            maven { url 'https://jitpack.io' }
+            maven { url 'https://www.jitpack.io' }
         }
 
         dependencies {
@@ -544,7 +544,7 @@ maven { url 'https://jitpack.io' }
 
     buildscript {
         repositories {
-            maven { url 'https://jitpack.io' }
+            maven { url 'https://www.jitpack.io' }
         }
 
         dependencies {
