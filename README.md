@@ -25,8 +25,7 @@ com.github.jadepeakpoet.ARouter:arouter-api:1.0.1
 com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
 2.  
 Maven library changed from Maven Central to jitpack  
-maven { url 'https://jitpack.io' }
-
+maven { url 'https://www.jitpack.io' }
 
 #### I. Feature
 1. **Supports direct parsing of standard URLs for jumps and automatic injection of parameters into target pages**
