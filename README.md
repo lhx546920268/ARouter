@@ -126,7 +126,7 @@ maven { url 'https://www.jitpack.io' }
 
     buildscript {
         repositories {
-            maven { url 'https://jitpack.io' }
+            maven { url 'https://www.jitpack.io' }
         }
 
         dependencies {
@@ -502,7 +502,7 @@ annotation，**Only the routing information of the same group can be registered 
 
     buildscript {
         repositories {
-            maven { url 'https://jitpack.io' }
+            maven { url 'https://www.jitpack.io' }
         }
 
         dependencies {
