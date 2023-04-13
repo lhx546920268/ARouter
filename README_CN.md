@@ -2,7 +2,7 @@
     一个用于帮助 Android App 进行组件化改造的框架 —— 支持模块间的路由、通信、解耦
 ```
 
-[English](https://github.com/jadepeakpoet/ARouter/blob/develop/README.md)
+[English](https://github.com/lhx546920268/ARouter/blob/develop/README.md)
 
 ##### [![Join the chat at https://gitter.im/alibaba/ARouter](https://badges.gitter.im/alibaba/ARouter.svg)](https://gitter.im/alibaba/ARouter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -10,7 +10,7 @@
 
 #### 说明
 # Android开源库翻新计划  
-https://github.com/jadepeakpoet/AndroidProjectRenovation  
+https://github.com/lhx546920268/AndroidProjectRenovation  
 
 官方两年没更新了，我fork了一个版本，主要做了以下更改，如果有问题，大家可以直接在AndroidProjectRenovation中给我提issue，我会尽快解决  
 1.迁移到androidx，对于本库可关闭jetifier(android.enableJetifier=false)或不做配置  
@@ -20,10 +20,10 @@ https://github.com/jadepeakpoet/AndroidProjectRenovation
 
 使用时，相对原来的库，仅需要做以下更改  
 1.  
-以下几个依赖的group从com.alibaba更改为com.github.jadepeakpoet.ARouter  
-com.github.jadepeakpoet.ARouter:arouter-register:1.0.1  
-com.github.jadepeakpoet.ARouter:arouter-api:1.0.1  
-com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1  
+以下几个依赖的group从com.alibaba更改为com.github.lhx546920268.ARouter  
+com.github.lhx546920268.ARouter:arouter-register:1.0.0  
+com.github.lhx546920268.ARouter:arouter-api:1.0.0  
+com.github.lhx546920268.ARouter:arouter-compiler:1.0.0  
 2.  
 maven库从mavenCentral变更为jitpack  
 maven { url 'https://www.jitpack.io' }
@@ -70,8 +70,8 @@ maven { url 'https://www.jitpack.io' }
     dependencies {
         // 替换成最新版本, 需要注意的是api
         // 要与compiler匹配使用，均使用最新版可以保证兼容
-        implementation 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
-        annotationProcessor 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
+        implementation 'com.github.lhx546920268.ARouter:arouter-api:1.0.0'
+        annotationProcessor 'com.github.lhx546920268.ARouter:arouter-compiler:1.0.0'
         ...
     }
     // 旧版本gradle插件(< 2.2)，可以使用apt插件，配置方法见文末'其他#4'
@@ -133,7 +133,7 @@ maven { url 'https://www.jitpack.io' }
         }
 
         dependencies {
-            classpath "com.github.jadepeakpoet.ARouter:arouter-register:1.0.1"
+            classpath "com.github.lhx546920268.ARouter:arouter-register:1.0.0"
         }
     }
     ```
@@ -559,8 +559,8 @@ maven { url 'https://www.jitpack.io' }
     }
 
     dependencies {
-        compile 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
-        apt 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
+        compile 'com.github.lhx546920268.ARouter:arouter-api:1.0.0'
+        apt 'com.github.lhx546920268.ARouter:arouter-compiler:1.0.0'
         ...
     }
     ```
@@ -577,8 +577,8 @@ maven { url 'https://www.jitpack.io' }
     }
 
     dependencies {
-        implementation 'com.github.jadepeakpoet.ARouter:arouter-api:1.0.1'
-        kapt 'com.github.jadepeakpoet.ARouter:arouter-compiler:1.0.1'
+        implementation 'com.github.lhx546920268.ARouter:arouter-api:1.0.0'
+        kapt 'com.github.lhx546920268.ARouter:arouter-compiler:1.0.0'
         ...
     }
     ```
